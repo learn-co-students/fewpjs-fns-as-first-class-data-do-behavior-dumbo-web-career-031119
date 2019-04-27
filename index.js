@@ -1,6 +1,6 @@
 /* Given Code, don't edit */
 
-function handleClick(e) {
+ const handleClick = (e) => {
   const timeString = document.getElementById('time').value
   displayMessage(greet(timeString))
 }
@@ -10,8 +10,8 @@ const displayMessage = (msg) => {
   document.getElementById("greeting").innerHTML = msg;
 }
 
-const greet = (timeStr) => {
-  const hour = parseInt(timeStr, 10);
+const greet = (time) => {
+  const hour = parseInt(time);
   if ( hour < 12) return "Good Morning"
   if ( hour > 17) return "Good Evening"
   return "Good Afternoon"
